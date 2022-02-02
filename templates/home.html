@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!-- Optional JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>Plant Disease Detection</title>
+</head>
+<body>
+	<div class="container">
+		<!-- Content here -->
+		<div class="jumbotron jumbotron-fluid">
+		  <div class="container">
+		    <h1 class="display-4">Pigeon-pea disease detection</h1>
+		    <p class="lead">This is a collabrative project between SGGSIE&T, Nanded and VNMKV, Paprbhani, India.</p>
+		  </div>
+    </div>
+    <br><br> <!-- for add space-->
+     <form class="form-horizontal" action="/submit" method="post" enctype="multipart/form-data">
+        <!-- for upload image-->
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="pwd">Upload Your Image :</label>
+          <div class="col-sm-10">                                               <!-- save in my image folder-->
+            <input type="file" class="form-control" placeholder="Hours Studied"  name="my_image" id="pwd">
+          </div>
+        </div>
+
+        <div class="form-group">        
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-success">Predic</button>
+          </div>
+        </div>
+      </form>
+
+      {% if prediction %}
+      <img src="{{img_path}}" height="400px" width="400px">
+      <h2>  Predicted disease : <i> {{prediction}} </i></h2>
+
+      {% endif %}
+      <br><br>
+
+              <!--HTML footer tag starts here-->
+              <footer>
+               
+                          <a href=
+      "https://in.linkedin.com/in/sandesh-bhagat-17330216b">Linked</a>|
+                          <a href=
+      "https://githubhelp.com/sandesh001">Github</a>|
+                          <a href=
+      "https://scholar.google.com/citations?user=xI8joUcAAAAJ&hl=en">Google Scholar</a>
+                       
+                   
+      <p class="lead">Sandesh Bhgat, Computer Vision Researcher, Center of Excellance in Signal and Image Processing, SGGSIE&T, Nanded</p>
+       
+                   
+              </footer>
+
+
+
+  	</div>
+
+
+</body>
+</html>
